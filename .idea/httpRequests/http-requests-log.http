@@ -1,0 +1,27 @@
+GET http://localhost:8080/api/user/info
+Accept: */*
+Cache-Control: no-cache
+Authorization: Basic YWRtaW46cGFzc3dvcmQ=
+
+<> 2019-02-03T055455.200.txt
+
+###
+
+GET http://localhost:8080/api/user/info
+Accept: */*
+Cache-Control: no-cache
+Authorization: Basic YWRtaW46cGFzc3dvcmQ=
+
+<> 2019-02-03T055403.200.txt
+
+###
+
+GET http://localhost:8080/api/user/info
+Accept: */*
+Cache-Control: no-cache
+Authorization: Basic YWRtaW46cGFzc3dvcmQ=
+
+<> 2019-02-03T055022.200.txt
+
+###
+

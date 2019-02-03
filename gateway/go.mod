@@ -2,6 +2,7 @@ module gateway
 
 require (
 	github.com/golang/protobuf v1.2.0
+	github.com/julienschmidt/httprouter v1.2.0
 	github.com/nats-io/gnatsd v1.4.0 // indirect
 	github.com/nats-io/go-nats v1.7.0
 	github.com/nats-io/nkeys v0.0.2 // indirect

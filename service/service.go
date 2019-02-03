@@ -1,4 +1,4 @@
-package service
+package main
 
 import (
 	"fmt"
@@ -17,7 +17,7 @@ func main() {
 
 	sub, _ := c.QueueSubscribe("api.user.info", "user-service", func (subject, replySubject string, request Request) {
 		if request.Method == "GET" {
-			_ = c.Publish(replySubject, &Request{Content: request.Headers[0].Value})
+			_ = c.Publish(replySubject, &Response{Content: "ok", Status: "200"})
 		}
 	})
 	defer sub.Unsubscribe()

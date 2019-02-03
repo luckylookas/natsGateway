@@ -27,23 +27,25 @@ func main() {
 
 	sub, _ := c.QueueSubscribe("api.auth", "auth-service", func (subject, replySubject string, request Request) {
 		if request.Method == "GET" {
-			authHeader := request.Headers[0].Value
-			b64Credentials := strings.Split(authHeader, " ")[1]
-			buf, _ := base64.StdEncoding.DecodeString(b64Credentials)
-			credentails := strings.Split(string(buf), ":")
+			if len(request.Headers) < 1 {
+				_ = c.Publish(replySubject, &Response{Status: "401"})
+			} else {
+				authHeader := request.Headers[0].Value
+				b64Credentials := strings.Split(authHeader, " ")[1]
+				buf, _ := base64.StdEncoding.DecodeString(b64Credentials)
+				credentails := strings.Split(string(buf), ":")
 
-			_ = db.View(func(tx *bolt.Tx) error {
-				b := tx.Bucket([]byte("user"))
-				storedPassword := string(b.Get([]byte(credentails [0])))
-				if storedPassword == credentails[1] {
-					_ = c.Publish(replySubject, true)
-				} else {
-					_ = c.Publish(replySubject, false)
-				}
-				return nil
-			})
-
-
+				_ = db.View(func(tx *bolt.Tx) error {
+					b := tx.Bucket([]byte("user"))
+					storedPassword := string(b.Get([]byte(credentails [0])))
+					if storedPassword == credentails[1] {
+						_ = c.Publish(replySubject, &Response{Status: "200"})
+					} else {
+						_ = c.Publish(replySubject, &Response{Status: "401"})
+					}
+					return nil
+				})
+			}
 		}
 	})
 	defer sub.Unsubscribe()
@@ -51,15 +53,4 @@ func main() {
 	signal.Notify(sigs, syscall.SIGINT, syscall.SIGTERM)
 	fmt.Println("listening on nats connection...")
 	<-sigs
-
-
-
-
-
-
-
-
-
-
-
 }

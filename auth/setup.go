@@ -14,7 +14,7 @@ func main() {
 	defer db.Close()
 
 	_ = db.Update(func(tx *bolt.Tx) error {
-		b := tx.Bucket([]byte("user"))
+		b, _ := tx.CreateBucket([]byte("user"))
 		fmt.Println("inserting admin user")
 		_ = b.Put([]byte("admin"), []byte("password"))
 		return nil

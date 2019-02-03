@@ -2,37 +2,50 @@ package main
 
 import (
 	"fmt"
+	"github.com/julienschmidt/httprouter"
 	"github.com/nats-io/go-nats"
 	"github.com/nats-io/go-nats/encoders/protobuf"
+	"log"
+	"net/http"
 	"strings"
 	"time"
 )
 
-func main() {
-	nc, _ := nats.Connect(nats.DefaultURL)
-	c, _ := nats.NewEncodedConn(nc, protobuf.PROTOBUF_ENCODER)
-	defer c.Close()
 
-	path := "/api/user/info"
+var natsConnection *nats.EncodedConn
 
+func Route(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
+	path := r.URL.Path
 	message := &Request{
 		Method: "GET",
-		Headers: []*Request_Header{
-			{Key: "Authorization", Value: "Basic YWRtaW46cGFzc3dvcmQ="},
-	}}
+		Headers: []*Header{
+			{Key: "Authorization", Value: r.Header.Get("Authorization")},
+		}}
 
-	path = strings.Trim(strings.Replace(path, "/", ".", -1), ".")
-	fmt.Println(path)
-	response := new(Request)
-	auth := new(bool)
+	response := new(Response)
+	err := natsConnection.Request("api.auth", message, response, 250 * time.Millisecond)
 
-	_ = c.Request("api.auth", message, auth, 250 * time.Millisecond)
+	if err != nil {
+		w.WriteHeader(500)
+		fmt.Println("write 500")
 
-	if *auth {
-		_ = c.Request(path, message, response, 250*time.Millisecond)
+	} else if response.Status == "200" {
+		path = strings.Trim(strings.Replace(path, "/", ".", -1), ".")
+		_ = natsConnection.Request(path, message, response, 250 * time.Millisecond)
+		_, _ = w.Write([]byte(response.Content))
 	} else {
-		fmt.Println("401 unauthorized")
+		fmt.Println("write 401")
+		w.WriteHeader(401)
 	}
+}
 
-	fmt.Println(response.Content)
+func main() {
+	nc, _ := nats.Connect(nats.DefaultURL)
+	natsConnection, _ = nats.NewEncodedConn(nc, protobuf.PROTOBUF_ENCODER)
+	defer natsConnection.Close()
+
+	router := httprouter.New()
+	router.GET("/api/user/info", Route)
+
+	log.Fatal(http.ListenAndServe(":8080", router))
 }
