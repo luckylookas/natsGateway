@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package main;
+
+message Request {
+    string method = 1;
+
+    message Header {
+        string key = 1;
+        string value = 2;
+    }
+
+    repeated Header headers = 3;
+    string content = 4;
+}
