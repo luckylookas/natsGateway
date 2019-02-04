@@ -1,7 +1,7 @@
 package main
 
 import (
-	"fmt"
+	"github.com/BillD00r/natsGateway/common"
 	"github.com/julienschmidt/httprouter"
 	"github.com/nats-io/go-nats"
 	"github.com/nats-io/go-nats/encoders/protobuf"
@@ -19,26 +19,23 @@ func Route(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 		w.WriteHeader(401)
 		return
 	} else {
-		message := &Request{
+		message := &common.Request{
 			Method: "GET",
-			Headers: []*Header{
+			Headers: []*common.Header{
 				{Key: "x-username", Value: username},
 				{Key: "x-password", Value: password},
 			}}
 
-		response := new(Response)
+		response := new(common.Response)
 		err := natsConnection.Request("api.auth", message, response, 250*time.Millisecond)
 
 		if err != nil {
 			w.WriteHeader(500)
-			fmt.Println("write 500")
-
 		} else if response.Status == "200" {
 			path = strings.Trim(strings.Replace(path, "/", ".", -1), ".")
 			_ = natsConnection.Request(path, message, response, 250*time.Millisecond)
 			_, _ = w.Write([]byte(response.Content))
 		} else {
-			fmt.Println("write 401")
 			w.WriteHeader(401)
 		}
 	}

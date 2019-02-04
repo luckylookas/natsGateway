@@ -1,3 +1,5 @@
+github.com/BillD00r/natsGateway/common v0.0.0-20190204123702-9247b30be476 h1:d4zfkuJfgqYH9mZKcOha/g2O/VIqdp5XF72oujDtXio=
+github.com/BillD00r/natsGateway/common v0.0.0-20190204123702-9247b30be476/go.mod h1:pXtORhsKVij0O+LZz5j5b3LCR9NIa+ryd/2c9wZGSTk=
 github.com/golang/protobuf v1.2.0 h1:P3YflyNX/ehuJFLhxviNdFxQPkGK5cDcApsge1SqnvM=
 github.com/golang/protobuf v1.2.0/go.mod h1:6lQm79b+lXiMfvg/cZm0SGofjICqVBUtrP5yJMmIC1U=
 github.com/nats-io/gnatsd v1.4.0 h1:/02WfGM2p1WU8xEapi44bH0Hdh71oEfrHiKiiqetdHM=

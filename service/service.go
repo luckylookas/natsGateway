@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/nats-io/go-nats"
 	"github.com/nats-io/go-nats/encoders/protobuf"
+	"github.com/BillD00r/natsGateway/common"
 	"os"
 	"os/signal"
 	"syscall"
@@ -15,9 +16,9 @@ func main() {
 	defer c.Close()
 	sigs := make(chan os.Signal, 1)
 
-	sub, _ := c.QueueSubscribe("api.user.info", "user-service", func (subject, replySubject string, request Request) {
+	sub, _ := c.QueueSubscribe("api.user.info", "user-service", func (subject, replySubject string, request common.Request) {
 		if request.Method == "GET" {
-			_ = c.Publish(replySubject, &Response{Content: "ok", Status: "200"})
+			_ = c.Publish(replySubject, &common.Response{Content: "ok", Status: "200"})
 		}
 	})
 	defer sub.Unsubscribe()
