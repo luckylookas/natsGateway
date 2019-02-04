@@ -1,4 +1,4 @@
-module common
+module github.com/BillD00r/natsGateway/common
 
 require (
 	github.com/golang/protobuf v1.2.0

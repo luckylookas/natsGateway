@@ -6,12 +6,12 @@ import (
 	"github.com/boltdb/bolt"
 	"github.com/nats-io/go-nats"
 	"github.com/nats-io/go-nats/encoders/protobuf"
+	"github.com/BillD00r/natsGateway/common"
 	"log"
 	"os"
 	"os/signal"
 	"strings"
 	"syscall"
-	"./../common"
 )
 
 func main() {
