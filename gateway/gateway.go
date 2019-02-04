@@ -20,7 +20,7 @@ func Route(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 		return
 	} else {
 		message := &common.Request{
-			Method: "GET",
+			Method: http.MethodGet,
 			Headers: []*common.Header{
 				{Key: "x-username", Value: username},
 				{Key: "x-password", Value: password},

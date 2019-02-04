@@ -1,5 +1,5 @@
-github.com/BillD00r/natsGateway/common v0.0.0-20190204123702-9247b30be476 h1:d4zfkuJfgqYH9mZKcOha/g2O/VIqdp5XF72oujDtXio=
-github.com/BillD00r/natsGateway/common v0.0.0-20190204123702-9247b30be476/go.mod h1:pXtORhsKVij0O+LZz5j5b3LCR9NIa+ryd/2c9wZGSTk=
+github.com/BillD00r/natsGateway/common v0.0.0-20190204130335-aedf984e617d h1:ZenbBmVXo2cCk5+f//fXrBnw+vvvAQrM5gOrpRIfbjc=
+github.com/BillD00r/natsGateway/common v0.0.0-20190204130335-aedf984e617d/go.mod h1:pXtORhsKVij0O+LZz5j5b3LCR9NIa+ryd/2c9wZGSTk=
 github.com/boltdb/bolt v1.3.1 h1:JQmyP4ZBrce+ZQu0dY660FMfatumYDLun9hBCUVIkF4=
 github.com/boltdb/bolt v1.3.1/go.mod h1:clJnj/oiGkjum5o1McbSZDSLxVThjynRyGBgiAx27Ps=
 github.com/golang/protobuf v1.2.0 h1:P3YflyNX/ehuJFLhxviNdFxQPkGK5cDcApsge1SqnvM=

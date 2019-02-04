@@ -1,7 +1,7 @@
 module auth
 
 require (
-	github.com/BillD00r/natsGateway/common v0.0.0-20190204123702-9247b30be476
+	github.com/BillD00r/natsGateway/common v0.0.0-20190204130335-aedf984e617d
 	github.com/boltdb/bolt v1.3.1
 	github.com/nats-io/gnatsd v1.4.0 // indirect
 	github.com/nats-io/go-nats v1.7.0

@@ -5,6 +5,7 @@ import (
 	"github.com/nats-io/go-nats"
 	"github.com/nats-io/go-nats/encoders/protobuf"
 	"github.com/BillD00r/natsGateway/common"
+	"net/http"
 	"os"
 	"os/signal"
 	"syscall"
@@ -17,7 +18,7 @@ func main() {
 	sigs := make(chan os.Signal, 1)
 
 	sub, _ := c.QueueSubscribe("api.user.info", "user-service", func (subject, replySubject string, request common.Request) {
-		if request.Method == "GET" {
+		if request.Method == http.MethodGet {
 			_ = c.Publish(replySubject, &common.Response{Content: "ok", Status: "200"})
 		}
 	})
