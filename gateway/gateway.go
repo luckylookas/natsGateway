@@ -11,31 +11,36 @@ import (
 	"time"
 )
 
-
 var natsConnection *nats.EncodedConn
 
 func Route(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 	path := r.URL.Path
-	message := &Request{
-		Method: "GET",
-		Headers: []*Header{
-			{Key: "Authorization", Value: r.Header.Get("Authorization")},
-		}}
-
-	response := new(Response)
-	err := natsConnection.Request("api.auth", message, response, 250 * time.Millisecond)
-
-	if err != nil {
-		w.WriteHeader(500)
-		fmt.Println("write 500")
-
-	} else if response.Status == "200" {
-		path = strings.Trim(strings.Replace(path, "/", ".", -1), ".")
-		_ = natsConnection.Request(path, message, response, 250 * time.Millisecond)
-		_, _ = w.Write([]byte(response.Content))
-	} else {
-		fmt.Println("write 401")
+	if username, password, ok := r.BasicAuth(); !ok {
 		w.WriteHeader(401)
+		return
+	} else {
+		message := &Request{
+			Method: "GET",
+			Headers: []*Header{
+				{Key: "x-username", Value: username},
+				{Key: "x-password", Value: password},
+			}}
+
+		response := new(Response)
+		err := natsConnection.Request("api.auth", message, response, 250*time.Millisecond)
+
+		if err != nil {
+			w.WriteHeader(500)
+			fmt.Println("write 500")
+
+		} else if response.Status == "200" {
+			path = strings.Trim(strings.Replace(path, "/", ".", -1), ".")
+			_ = natsConnection.Request(path, message, response, 250*time.Millisecond)
+			_, _ = w.Write([]byte(response.Content))
+		} else {
+			fmt.Println("write 401")
+			w.WriteHeader(401)
+		}
 	}
 }
 

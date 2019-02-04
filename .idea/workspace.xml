@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74e4d0f8-cbdd-4246-bee8-744a56629e25" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/http_util.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/auth/auth.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/http.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/auth/http.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/setup.go" beforeDir="false" afterPath="$PROJECT_DIR$/auth/setup.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/http.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/common/http.pb.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway/gateway.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/gateway.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/http.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/http.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http.proto" beforeDir="false" afterPath="$PROJECT_DIR$/http.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/http.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/http.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/service.go" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,23 +17,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gateway/gateway.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="536">
-              <caret line="36" column="50" lean-forward="true" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
-              <folding>
-                <element signature="e#14#128#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="240">
+              <caret line="25" column="53" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/GOPATH/pkg/mod/github.com/julienschmidt/httprouter@v1.2.0/router.go">
+        <entry file="file://$USER_HOME$/go/src/net/http/request.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="178" column="17" selection-start-line="178" selection-start-column="17" selection-end-line="178" selection-end-column="17" />
+            <state relative-caret-position="194">
+              <caret line="871" column="18" selection-start-line="871" selection-start-column="18" selection-end-line="871" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -48,60 +38,38 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/service/service.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
+            <state relative-caret-position="180">
               <caret line="19" column="77" selection-start-line="19" selection-start-column="77" selection-end-line="19" selection-end-column="77" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/http.proto">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/http.pb.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1224" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service/http.pb.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gateway/http.pb.go">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/auth/http.pb.go">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/auth/go.mod">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/auth/auth.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
+            <state relative-caret-position="375">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
               <folding>
                 <element signature="e#14#202#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/http_util.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/http.pb.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -115,15 +83,12 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" path="C:\Go" />
+  <component name="GOROOT" path="$USER_HOME$/go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="dummy://restClient/response1.txt" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -139,16 +104,18 @@
         <option value="$PROJECT_DIR$/auth/setup.go" />
         <option value="$PROJECT_DIR$/http.proto" />
         <option value="$PROJECT_DIR$/service/service.go" />
-        <option value="$PROJECT_DIR$/auth/auth.go" />
         <option value="$PROJECT_DIR$/gateway/gateway.go" />
+        <option value="$PROJECT_DIR$/common/http_util.go" />
+        <option value="$PROJECT_DIR$/common/http.pb.go" />
+        <option value="$PROJECT_DIR$/auth/auth.go" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="921" />
-    <option name="y" value="456" />
-    <option name="width" value="2100" />
-    <option name="height" value="1398" />
+    <option name="x" value="2005" />
+    <option name="y" value="103" />
+    <option name="width" value="1657" />
+    <option name="height" value="941" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -156,56 +123,59 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="nats-gateway" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nats-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="natsGateway" type="b2602c69:ProjectViewProjectNode" />
+              <item name="natsGateway" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="nats-gateway" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nats-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="natsGateway" type="b2602c69:ProjectViewProjectNode" />
+              <item name="natsGateway" type="462c0819:PsiDirectoryNode" />
               <item name="auth" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="nats-gateway" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nats-gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="natsGateway" type="b2602c69:ProjectViewProjectNode" />
+              <item name="natsGateway" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="nats-gateway" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nats-gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="natsGateway" type="b2602c69:ProjectViewProjectNode" />
+              <item name="natsGateway" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go Application" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
     <property name="configurable.Module.GOPATH.is.expanded" value="false" />
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\golang\nats-gateway\service" />
+      <recent name="D:\projects\golang\nats-gateway\gateway" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/common" />
       <recent name="D:\projects\golang\nats-gateway\auth" />
       <recent name="D:\projects\golang\nats-gateway\gateway" />
       <recent name="D:\projects\golang\nats-gateway\service" />
       <recent name="D:\projects\golang\nats-gateway" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\projects\golang\nats-gateway\service" />
-      <recent name="D:\projects\golang\nats-gateway\gateway" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -250,17 +220,32 @@
       </list>
     </option>
   </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="74e4d0f8-cbdd-4246-bee8-744a56629e25" name="Default Changelist" comment="" />
+      <created>1549265779219</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1549265779219</updated>
+      <workItem from="1549265782840" duration="715000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="715000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="2575" height="1415" extended-state="6" />
+    <frame x="1987" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2636183" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2733813" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="REST Client" weight="0.32969603" />
+      <window_info id="Designer" order="3" />
+      <window_info id="Learn" order="4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32949308" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32900432" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -268,12 +253,16 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.34060794" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.33693305" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="REST Client" order="12" weight="0.32969603" />
+      <window_info anchor="bottom" id="SonarLint" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,13 +275,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/client.pb.go" />
     <entry file="file://$PROJECT_DIR$/client.proto" />
-    <entry file="file://C:/Go/src/strings/strings.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14365">
-          <caret line="849" column="5" selection-start-line="849" selection-start-column="5" selection-end-line="849" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/Go/src/strings/strings.go" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_protobuf-all-3.7.0-rc-2.zip/protobuf-3.7.0-rc-2/README.md" />
     <entry file="file://$PROJECT_DIR$/gateway/go.mod">
       <provider selected="true" editor-type-id="text-editor">
@@ -314,31 +297,34 @@
     <entry file="file://$PROJECT_DIR$/service/go.sum">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://C:/GOPATH/pkg/mod/github.com/julienschmidt/httprouter@v1.2.0/router.go" />
     <entry file="file://$PROJECT_DIR$/auth/setup.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
+        <state relative-caret-position="180">
           <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/auth/go.mod">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/service/service.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="19" column="77" selection-start-line="19" selection-start-column="77" selection-end-line="19" selection-end-column="77" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/http.proto">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
+        <state relative-caret-position="255">
           <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/http.pb.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1224" />
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/service/http.pb.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
+        <state relative-caret-position="45">
           <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
         </state>
       </provider>
@@ -349,36 +335,46 @@
     <entry file="file://$PROJECT_DIR$/auth/http.pb.go">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/service.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="19" column="77" selection-start-line="19" selection-start-column="77" selection-end-line="19" selection-end-column="77" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/auth/go.mod">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://C:/GOPATH/pkg/mod/github.com/julienschmidt/httprouter@v1.2.0/router.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="178" column="17" selection-start-line="178" selection-start-column="17" selection-end-line="178" selection-end-column="17" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/auth/auth.db">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/auth/auth.go">
+    <entry file="file://$USER_HOME$/go/src/net/http/request.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
-          <folding>
-            <element signature="e#14#202#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="194">
+          <caret line="871" column="18" selection-start-line="871" selection-start-column="18" selection-end-line="871" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gateway/gateway.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="36" column="50" lean-forward="true" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
+        <state relative-caret-position="240">
+          <caret line="25" column="53" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/http.pb.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/http_util.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auth/auth.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
           <folding>
-            <element signature="e#14#128#0" expanded="true" />
+            <element signature="e#14#202#0" expanded="true" />
           </folding>
         </state>
       </provider>
